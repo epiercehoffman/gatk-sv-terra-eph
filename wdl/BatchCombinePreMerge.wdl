@@ -22,7 +22,7 @@ workflow BatchCombinePreMerge {
 	output {
 		Array[File] filtered_depth_vcf=SelectBatchesAndColumns.columns_as_rows[0]
 		Array[File] filtered_pesr_vcf=SelectBatchesAndColumns.columns_as_rows[1]
-		Array[String]? sample_set_id = batches
+		Array[String]? batches_combined_pre_merge = batches
 	}
 	
 }
