@@ -1,4 +1,0 @@
-{
-    "BatchCombinePreMerge.sample_sets_table_tsv": "gs://broad-dsde-methods-eph/sample_set_entity.tsv",
-    "BatchCombinePreMerge.batches": ["test_large_placeholder"]
-}
