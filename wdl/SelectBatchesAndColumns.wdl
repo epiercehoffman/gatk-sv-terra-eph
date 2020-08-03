@@ -30,9 +30,7 @@ task SelectBatchesAndColumns {
 			colnum=$(head -1 $FILE | awk -v RS='\t' -v field="$COL" '$0~field{print NR; exit}')
 			COLNUMS_COMMAS+="${COMMA}${colnum}"
 			COMMA=","
-			1>&2 echo "$COLNUMS_COMMAS" # 68,71 here
 		done
-		#COLNUMS_COMMAS=$(printf ",%s" "${COLNUMS[@]}")
 		1>&2 echo "Column numbers=$COLNUMS_COMMAS"
 
 		# if batches specified, select rows containing given batches in 1st column then select specified columns
