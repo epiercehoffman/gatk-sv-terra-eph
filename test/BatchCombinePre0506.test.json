@@ -1,0 +1,4 @@
+{
+    "BatchCombinePre0506.sample_sets_table_tsv": "gs://broad-dsde-methods-eph/sample_set_entity.tsv",
+    "BatchCombinePre0506.batches": ["test_large_placeholder"]
+}
