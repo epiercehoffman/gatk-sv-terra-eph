@@ -69,10 +69,11 @@ task SelectBatchesAndColumns {
               for column in columns:
                 if output_line != "":
                   output_line += '\t'
-                # if column does not exist, leave blank - because some files are optional inputs/outputs so not ok to exit
-                # but need to have empty spot so indices of outputs will not be disrupted 
+                # if column does not exist, enter DNE string - because some files are optional inputs/outputs so not ok to exit
+                # but need to fill the spot so indices of outputs will not be disrupted 
                 # (this is why simple list comprehension + tab-join was not used to generate output_line)
                 if column not in header:
+                  output_line += "COLUMN_DNE"
                   continue
                 # get entry from this batch for each desired column, remove brackets if an array of files, and save
                 file = line[header[column]].lstrip('["').rstrip('"]')
